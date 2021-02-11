@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="Index.css" />
+    <meta name="viewport" content="width=divece-width" ,initial-scale="1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account - Redstore</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="Index.html"> <img src="./img/logo.png" alt="" width="125px" /></a> 
+                </div>
+                <nav>
+                  <ul id="Menuitems">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                  </ul>
+                </nav>
+                <a href="card.html"><img src="/img/cart.png" width="30px" height="30px" alt="" /></a>
+            
+            <img src="/img/menu.png" class="menu-icon" onclick="menutoggle()" />
+          </div>
+      </div>
+    </div>
+    <!-- account-page -->
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col2">
+            <img src="./img/image1.png" alt="" width="100%" />
+          </div>
+          <div class="col2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="Login()">Login</span>
+                <span onclick="Register()">Register</span>
+                <hr id="Indicator" />
+              </div>
+              <form id="Loginfrom">
+                <input type="text" placeholder="UserName" />
+                <input type="password" placeholder="Password" />
+                <button type="submit" class="btn">Login</button>
+                <a href="">Forgot password</a>
+              </form>
+              <form id="Rgfrom">
+                <input type="text" placeholder="UserName" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button type="submit" class="btn">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---footer------- -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h2>Download Our App</h2>
+            <p>Download App for Android and iso mobile phone</p>
+            <div class="app-logo">
+              <img src="/img/play-store.png" alt="" />
+              <img src="/img/app-store.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="/img/logo-white.png" alt="" />
+            <p>Download App for Android and iso mobile phone</p>
+          </div>
+
+          <div class="footer-col-3">
+            <h2>Usefull Links</h2>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h2>Follow Us</h2>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>instagram</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="Copyrights">Copyright 2021 - RedStore</p>
+      </div>
+    </div>
+    <!-- js for toggle menu -->
+    <script>
+      var Menuitems = document.getElementById("Menuitems");
+
+      Menuitems.styel.maxHeight = "0px";
+      function menutoggle() {
+        if (Menuitems.style.maxHeight == "0px") {
+          Menuitems.style.maxHeight = "200px";
+        } else {
+          Menuitems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <!-- js for toggle from -->
+    <script>
+      var Loginfrom = document.getElementById("Loginfrom");
+      var Rgfrom = document.getElementById("Rgfrom");
+      var Indicator = document.getElementById("Indicator");
+      function Register() {
+        Rgfrom.style.transform = "translateX(0px)";
+        Loginfrom.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+      }
+      function Login() {
+        Rgfrom.style.transform = "translateX(300px)";
+        Loginfrom.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+      }
+    </script>
+  </body>
+</html>
